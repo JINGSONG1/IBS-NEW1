@@ -1,15 +1,15 @@
 Reticulotype Toolkit — IBS Digital Twin Reinforcement Engine
 （FSM‑driven, doctor‑in‑the‑loop recommendation system for Irritable Bowel Syndrome）
 Project scope
-1.Personalised therapy planner for IBS‑D/C/M based on questionnaire + wearable streams.
+Personalised therapy planner for IBS‑D/C/M based on questionnaire + wearable streams.
 
-2.Finite‑state causal graph (FSM) guarantees mechanism‑consistent decisions.
+Finite‑state causal graph (FSM) guarantees mechanism‑consistent decisions.
 
-3.PPO + Memory Replay + Auto‑Critic learns optimal multi‑step drug / lifestyle paths.
+PPO + Memory Replay + Auto‑Critic learns optimal multi‑step drug / lifestyle paths.
 
-4.Doctor–AI co‑supervision (SIP) provides real‑time explanation & veto.
+Doctor–AI co‑supervision (SIP) provides real‑time explanation & veto.
 
-5.Edge‑CPU ≤0.5 s / patient → suitable for primary‑care deployment.
+Edge‑CPU ≤0.5 s / patient → suitable for primary‑care deployment.
 
 This repository reproduces all figures, tables and supplementary analyses in our Nature Medicine manuscript “Graph‑constrained reinforcement learning enables clinically‑explainable digital twins for IBS”.
 
