@@ -11,7 +11,7 @@ import argparse
 import json
 import os
 from datetime import datetime
-from typing import Dict, List, Any, Tuple, Optional
+from typing import Dict, List, Any, Tuple
 import logging
 from dataclasses import dataclass
 from collections import defaultdict
@@ -342,10 +342,9 @@ class LOCOValidator:
                 if center != held_out_center:
                     train_data.extend(center_samples)
             
-            # 训练模型
-            model = model_class()
-            # 这里应该实现具体的训练逻辑
-            # train_model(model, train_data, config)
+            # 训练模型（此处可插入具体训练逻辑）
+            _ = model_class()
+            # 例如：train_model(model, train_data, config)
             
             # 评估模型
             # test_score = evaluate_model(model, test_data)
