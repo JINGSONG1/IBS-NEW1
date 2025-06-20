@@ -3,7 +3,7 @@ name: Reticulotype CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ IBS ]
   pull_request:
     branches: [ main ]
 
