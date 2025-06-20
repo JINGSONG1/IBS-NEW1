@@ -1,4 +1,5 @@
-#Reticulotype Toolkit — IBS Digital Twin Reinforcement Engine（FSM‑driven, doctor‑in‑the‑loop recommendation system for Irritable Bowel Syndrome）
+Reticulotype Toolkit — IBS Digital Twin Reinforcement Engine
+（FSM‑driven, doctor‑in‑the‑loop recommendation system for Irritable Bowel Syndrome）
 Project scope
 1.Personalised therapy planner for IBS‑D/C/M based on questionnaire + wearable streams.
 
