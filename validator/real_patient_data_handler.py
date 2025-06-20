@@ -10,11 +10,10 @@ import pandas as pd
 import numpy as np
 import json
 import hashlib
-from typing import Dict, List, Tuple, Optional, Any, Union
+from typing import Dict, List, Optional
 from dataclasses import dataclass, asdict
-from datetime import datetime, timedelta
+from datetime import datetime
 import logging
-from pathlib import Path
 
 # 配置日志
 logging.basicConfig(level=logging.INFO)
@@ -242,7 +241,8 @@ class RealPatientDataHandler:
         """安全转换为整数"""
         try:
             return int(value) if pd.notna(value) else None
-        except:
+        except Exception as e:  # noqa: BLE001
+            logger.warning("无法转换为整数: %s", e)
             return None
     
     def _safe_bool(self, value) -> bool:
@@ -511,7 +511,7 @@ if __name__ == "__main__":
     
     # 生成统计摘要
     stats = handler.generate_summary_statistics()
-    print(f"\n📈 描述性统计:")
+    print("\n📈 描述性统计:")
     print(f"平均年龄: {stats['demographics']['age_mean']:.1f}岁")
     print(f"性别分布: {stats['demographics']['gender_counts']}")
     
