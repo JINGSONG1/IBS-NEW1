@@ -1,0 +1,100 @@
+{
+  "primary_endpoint": {
+    "baseline_mean": 293.1578947368421,
+    "baseline_std": 86.95417896666085,
+    "t1_mean": 277.63157894736844,
+    "t1_improvement": 15.526315789473685,
+    "t1_improvement_pct": 4.084210526315791,
+    "t1_pvalue": 0.08121504657114917,
+    "t1_cohens_d": 0.17855744225273631,
+    "t2_mean": 271.3157894736842,
+    "t2_improvement": 21.842105263157894,
+    "t2_improvement_pct": 4.105263157894736,
+    "t2_pvalue": 0.07362014691021714,
+    "t2_cohens_d": 0.25119097808435814,
+    "n_patients": 19
+  },
+  "clinical_response": {
+    "T1_response_30pct": 0.0,
+    "T1_response_50pct": 0.0,
+    "T1_clinical_improvement": 10.526315789473683,
+    "T1_mean_improvement_pct": 4.080939604997366,
+    "T2_response_30pct": 0.0,
+    "T2_response_50pct": 0.0,
+    "T2_clinical_improvement": 31.57894736842105,
+    "T2_mean_improvement_pct": 4.10205546117169
+  },
+  "subgroup_analysis": {
+    "gender": {
+      "mean": {
+        "female": 7.0,
+        "male": 0.88
+      },
+      "std": {
+        "female": 10.01,
+        "male": 26.14
+      },
+      "count": {
+        "female": 10,
+        "male": 9
+      }
+    },
+    "ibs_type": {
+      "mean": {
+        "便秘型": 7.41,
+        "未定型": -7.41,
+        "混合型": -0.87,
+        "腹泻型": 9.71
+      },
+      "std": {
+        "便秘型": NaN,
+        "未定型": 9.11,
+        "混合型": 32.68,
+        "腹泻型": 11.83
+      },
+      "count": {
+        "便秘型": 1,
+        "未定型": 3,
+        "混合型": 5,
+        "腹泻型": 10
+      }
+    },
+    "endometriosis": {
+      "mean": {
+        "否": 3.92,
+        "是": 5.07
+      },
+      "std": {
+        "否": 20.76,
+        "是": 6.16
+      },
+      "count": {
+        "否": 16,
+        "是": 3
+      }
+    }
+  },
+  "psychological_outcomes": {
+    "gad7_baseline": 10.631578947368421,
+    "gad7_t2": 10.421052631578947,
+    "gad7_improvement": 0.21052631578947434,
+    "phq9_baseline": 13.894736842105264,
+    "phq9_t2": 13.0,
+    "phq9_improvement": 0.8947368421052637
+  },
+  "journal_readiness": {
+    "criteria": {
+      "statistical_significance": "False",
+      "clinical_significance": "False",
+      "effect_size_adequate": "False",
+      "meaningful_improvement": "False",
+      "sustained_improvement": "True",
+      "sample_size_reasonable": true,
+      "longitudinal_design": true,
+      "standardized_assessment": true
+    },
+    "total_score": 0.5,
+    "readiness_level": "Needs Significant Improvement"
+  },
+  "generated_date": "2025-06-18 08:42:57"
+}

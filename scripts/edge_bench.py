@@ -1,0 +1,1 @@
+print("Edge benchmark test")

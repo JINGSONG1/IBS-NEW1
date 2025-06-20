@@ -1,0 +1,10 @@
+# Default Configuration File
+training:
+  episodes: 1000
+  batch_size: 32
+  learning_rate: 0.001
+  gamma: 0.99
+
+paths:
+  mechanism_graph: "config/mechanism_graph.json"
+  symptom_vocab: "config/symptom_vocab.json"

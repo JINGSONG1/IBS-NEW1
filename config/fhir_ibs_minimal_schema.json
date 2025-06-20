@@ -1,0 +1,286 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FHIR-IBS Minimal Schema",
+  "description": "IBS诊疗数据的最小FHIR字段规范，支持任何医院1-2天内接入",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["patient", "condition", "observation", "medication_request"],
+  
+  "properties": {
+    "patient": {
+      "type": "object",
+      "description": "患者基本信息",
+      "required": ["id", "gender", "birthDate"],
+      "properties": {
+        "id": {"type": "string", "description": "患者唯一标识"},
+        "gender": {"type": "string", "enum": ["male", "female", "other", "unknown"]},
+        "birthDate": {"type": "string", "format": "date", "description": "出生日期 YYYY-MM-DD"}
+      }
+    },
+    
+    "condition": {
+      "type": "object", 
+      "description": "IBS诊断信息",
+      "required": ["code", "severity", "onset"],
+      "properties": {
+        "code": {
+          "type": "object",
+          "description": "IBS诊断编码",
+          "properties": {
+            "coding": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "system": {"type": "string", "default": "http://snomed.info/sct"},
+                  "code": {"type": "string", "enum": ["10743008", "235744008", "235745009", "235746005"]},
+                  "display": {"type": "string", "enum": ["IBS", "IBS-D", "IBS-C", "IBS-M"]}
+                }
+              }
+            }
+          }
+        },
+        "severity": {
+          "type": "object",
+          "properties": {
+            "coding": {
+              "type": "array", 
+              "items": {
+                "type": "object",
+                "properties": {
+                  "code": {"type": "string", "enum": ["mild", "moderate", "severe"]},
+                  "display": {"type": "string", "enum": ["轻度", "中度", "重度"]}
+                }
+              }
+            }
+          }
+        },
+        "onset": {"type": "string", "format": "date", "description": "发病时间"}
+      }
+    },
+    
+    "observation": {
+      "type": "array",
+      "description": "症状观察记录",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["code", "valueQuantity"],
+        "properties": {
+          "code": {
+            "type": "object",
+            "properties": {
+              "coding": {
+                "type": "array",
+                "items": {
+                  "type": "object", 
+                  "properties": {
+                    "system": {"type": "string", "default": "http://loinc.org"},
+                    "code": {"type": "string"},
+                    "display": {"type": "string"}
+                  }
+                }
+              }
+            }
+          },
+          "valueQuantity": {
+            "type": "object",
+            "required": ["value", "unit"],
+            "properties": {
+              "value": {"type": "number", "minimum": 0, "maximum": 10},
+              "unit": {"type": "string", "default": "score"},
+              "system": {"type": "string", "default": "http://unitsofmeasure.org"}
+            }
+          },
+          "effectiveDateTime": {"type": "string", "format": "date-time"}
+        }
+      }
+    },
+    
+    "medication_request": {
+      "type": "array",
+      "description": "药物处方记录", 
+      "items": {
+        "type": "object",
+        "required": ["medicationCodeableConcept", "dosageInstruction"],
+        "properties": {
+          "medicationCodeableConcept": {
+            "type": "object",
+            "properties": {
+              "coding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "system": {"type": "string", "default": "http://www.whocc.no/atc"},
+                    "code": {"type": "string", "description": "ATC药物编码"},
+                    "display": {"type": "string", "description": "药物名称"}
+                  }
+                }
+              }
+            }
+          },
+          "dosageInstruction": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {"type": "string", "description": "用法用量文本"},
+                "timing": {
+                  "type": "object",
+                  "properties": {
+                    "repeat": {
+                      "type": "object",
+                      "properties": {
+                        "frequency": {"type": "integer", "minimum": 1},
+                        "period": {"type": "number", "minimum": 0},
+                        "periodUnit": {"type": "string", "enum": ["s", "min", "h", "d", "wk", "mo", "a"]}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    
+    "diagnostic_report": {
+      "type": "object",
+      "description": "诊断报告",
+      "properties": {
+        "status": {"type": "string", "enum": ["registered", "partial", "preliminary", "final"]},
+        "category": {
+          "type": "object",
+          "properties": {
+            "coding": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "system": {"type": "string", "default": "http://terminology.hl7.org/CodeSystem/v2-0074"},
+                  "code": {"type": "string", "default": "LAB"},
+                  "display": {"type": "string", "default": "Laboratory"}
+                }
+              }
+            }
+          }
+        },
+        "effectiveDateTime": {"type": "string", "format": "date-time"},
+        "result": {
+          "type": "array",
+          "description": "检查结果引用",
+          "items": {
+            "type": "object",
+            "properties": {
+              "reference": {"type": "string", "description": "观察记录引用"}
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "definitions": {
+    "common_symptoms": {
+      "description": "IBS常见症状编码",
+      "type": "object",
+      "properties": {
+        "abdominal_pain": {
+          "loinc_code": "72133-2",
+          "display": "腹痛评分",
+          "value_range": "0-10"
+        },
+        "diarrhea_frequency": {
+          "loinc_code": "72135-7", 
+          "display": "腹泻频率",
+          "value_range": "0-10"
+        },
+        "constipation_severity": {
+          "loinc_code": "72136-5",
+          "display": "便秘严重度", 
+          "value_range": "0-10"
+        },
+        "bloating": {
+          "loinc_code": "72137-3",
+          "display": "腹胀程度",
+          "value_range": "0-10"
+        },
+        "anxiety_level": {
+          "loinc_code": "72133-1",
+          "display": "焦虑水平",
+          "value_range": "0-10"
+        }
+      }
+    },
+    
+    "common_medications": {
+      "description": "IBS常用药物ATC编码",
+      "type": "object", 
+      "properties": {
+        "antispasmodics": {
+          "atc_codes": ["A03AA04", "A03AA07"],
+          "examples": ["双环胺", "匹维溴铵"]
+        },
+        "antidiarrheals": {
+          "atc_codes": ["A07DA03", "A07DA02"],
+          "examples": ["洛哌丁胺", "地芬诺酯"]
+        },
+        "laxatives": {
+          "atc_codes": ["A06AD11", "A06AD65"],
+          "examples": ["聚乙二醇", "乳果糖"]
+        },
+        "probiotics": {
+          "atc_codes": ["A07FA01", "A07FA51"],
+          "examples": ["益生菌制剂"]
+        }
+      }
+    }
+  },
+  
+  "examples": [
+    {
+      "description": "典型IBS-D患者数据示例",
+      "data": {
+        "patient": {
+          "id": "patient-001",
+          "gender": "female", 
+          "birthDate": "1985-03-15"
+        },
+        "condition": {
+          "code": {
+            "coding": [{
+              "system": "http://snomed.info/sct",
+              "code": "235744008",
+              "display": "IBS-D"
+            }]
+          },
+          "severity": {
+            "coding": [{
+              "code": "moderate",
+              "display": "中度"
+            }]
+          },
+          "onset": "2022-01-15"
+        },
+        "observation": [
+          {
+            "code": {
+              "coding": [{
+                "system": "http://loinc.org",
+                "code": "72133-2", 
+                "display": "腹痛评分"
+              }]
+            },
+            "valueQuantity": {
+              "value": 6,
+              "unit": "score"
+            },
+            "effectiveDateTime": "2024-01-15T09:00:00Z"
+          }
+        ]
+      }
+    }
+  ]
+} 

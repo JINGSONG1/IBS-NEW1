@@ -1,0 +1,252 @@
+{
+  "patients": [
+    {
+      "id": "P001",
+      "age": 50,
+      "gender": "Male",
+      "ethnicity": "African American",
+      "baseline_severity": 6,
+      "endometriosis": false,
+      "improvement_percent": 49.66452255222269,
+      "final_severity": 3.0201286468666386
+    },
+    {
+      "id": "P002",
+      "age": 57,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "baseline_severity": 7,
+      "endometriosis": false,
+      "improvement_percent": 58.14500820707473,
+      "final_severity": 2.9298494255047687
+    },
+    {
+      "id": "P003",
+      "age": 13,
+      "gender": "Male",
+      "ethnicity": "Hispanic",
+      "baseline_severity": 8,
+      "endometriosis": false,
+      "improvement_percent": 73.00305511633434,
+      "final_severity": 2.159755590693253
+    },
+    {
+      "id": "P004",
+      "age": 28,
+      "gender": "Male",
+      "ethnicity": "Caucasian",
+      "baseline_severity": 8,
+      "endometriosis": false,
+      "improvement_percent": 47.36151924188011,
+      "final_severity": 4.211078460649591
+    },
+    {
+      "id": "P005",
+      "age": 37,
+      "gender": "Female",
+      "ethnicity": "African American",
+      "baseline_severity": 8,
+      "endometriosis": true,
+      "improvement_percent": 39.27758156103704,
+      "final_severity": 4.857793475117036
+    },
+    {
+      "id": "P006",
+      "age": 30,
+      "gender": "Female",
+      "ethnicity": "Caucasian",
+      "baseline_severity": 7,
+      "endometriosis": false,
+      "improvement_percent": 59.92003024800149,
+      "final_severity": 2.805597882639896
+    },
+    {
+      "id": "P007",
+      "age": 43,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "baseline_severity": 7,
+      "endometriosis": false,
+      "improvement_percent": 72.35725202564085,
+      "final_severity": 1.9349923582051405
+    },
+    {
+      "id": "P008",
+      "age": 34,
+      "gender": "Male",
+      "ethnicity": "Asian",
+      "baseline_severity": 8,
+      "endometriosis": false,
+      "improvement_percent": 37.240681501530965,
+      "final_severity": 5.020745479877522
+    },
+    {
+      "id": "P009",
+      "age": 57,
+      "gender": "Male",
+      "ethnicity": "Hispanic",
+      "baseline_severity": 6,
+      "endometriosis": false,
+      "improvement_percent": 59.365914702979964,
+      "final_severity": 2.4380451178212024
+    },
+    {
+      "id": "P010",
+      "age": 56,
+      "gender": "Female",
+      "ethnicity": "Hispanic",
+      "baseline_severity": 8,
+      "endometriosis": false,
+      "improvement_percent": 44.74063709528983,
+      "final_severity": 4.420749032376814
+    },
+    {
+      "id": "P011",
+      "age": 49,
+      "gender": "Male",
+      "ethnicity": "Asian",
+      "baseline_severity": 7,
+      "endometriosis": false,
+      "improvement_percent": 11.977383989619888,
+      "final_severity": 6.161583120726608
+    },
+    {
+      "id": "P012",
+      "age": 33,
+      "gender": "Female",
+      "ethnicity": "African American",
+      "baseline_severity": 6,
+      "endometriosis": false,
+      "improvement_percent": 61.051014289190995,
+      "final_severity": 2.33693914264854
+    },
+    {
+      "id": "P013",
+      "age": 42,
+      "gender": "Male",
+      "ethnicity": "Hispanic",
+      "baseline_severity": 8,
+      "endometriosis": false,
+      "improvement_percent": 62.057791324073676,
+      "final_severity": 3.035376694074106
+    },
+    {
+      "id": "P014",
+      "age": 39,
+      "gender": "Female",
+      "ethnicity": "Caucasian",
+      "baseline_severity": 6,
+      "endometriosis": false,
+      "improvement_percent": 53.49462025991603,
+      "final_severity": 2.7903227844050376
+    },
+    {
+      "id": "P015",
+      "age": 61,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "baseline_severity": 8,
+      "endometriosis": true,
+      "improvement_percent": 38.755281073425145,
+      "final_severity": 4.899577514125989
+    },
+    {
+      "id": "P016",
+      "age": 41,
+      "gender": "Male",
+      "ethnicity": "Caucasian",
+      "baseline_severity": 9,
+      "endometriosis": false,
+      "improvement_percent": 44.40108711209704,
+      "final_severity": 5.0039021599112665
+    },
+    {
+      "id": "P017",
+      "age": 43,
+      "gender": "Female",
+      "ethnicity": "African American",
+      "baseline_severity": 6,
+      "endometriosis": false,
+      "improvement_percent": 78.17071260284712,
+      "final_severity": 1.3097572438291731
+    },
+    {
+      "id": "P018",
+      "age": 44,
+      "gender": "Male",
+      "ethnicity": "Hispanic",
+      "baseline_severity": 6,
+      "endometriosis": false,
+      "improvement_percent": 48.6524290076901,
+      "final_severity": 3.0808542595385937
+    },
+    {
+      "id": "P019",
+      "age": 58,
+      "gender": "Male",
+      "ethnicity": "Asian",
+      "baseline_severity": 8,
+      "endometriosis": false,
+      "improvement_percent": 54.433379148173046,
+      "final_severity": 3.6453296681461564
+    },
+    {
+      "id": "P020",
+      "age": 71,
+      "gender": "Male",
+      "ethnicity": "Asian",
+      "baseline_severity": 9,
+      "endometriosis": false,
+      "improvement_percent": 58.59851331471273,
+      "final_severity": 3.7261338016758545
+    },
+    {
+      "id": "P021",
+      "age": 52,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "baseline_severity": 6,
+      "endometriosis": false,
+      "improvement_percent": 46.891567179278695,
+      "final_severity": 3.1865059692432784
+    },
+    {
+      "id": "P022",
+      "age": 34,
+      "gender": "Male",
+      "ethnicity": "Hispanic",
+      "baseline_severity": 7,
+      "endometriosis": false,
+      "improvement_percent": 57.762021416626254,
+      "final_severity": 2.9566585008361623
+    },
+    {
+      "id": "P023",
+      "age": 41,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "baseline_severity": 6,
+      "endometriosis": false,
+      "improvement_percent": 33.77737367124833,
+      "final_severity": 3.9733575797251
+    }
+  ],
+  "clinical_efficacy": {
+    "mean_improvement": 51.78692941916918,
+    "p_value": 0.03517349346310702,
+    "cohens_d": 0.47856625831371924,
+    "responder_rate": 95.65217391304348,
+    "remission_rate": 52.17391304347826
+  },
+  "diagnostic_comparison": {
+    "ai_accuracy": 0.85,
+    "rome_accuracy": 0.75,
+    "improvement_percent": 13.33333333333333
+  },
+  "continuous_learning": {
+    "initial_performance": 64.13285384395044,
+    "final_performance": 101.29891807659267,
+    "total_improvement": 37.16606423264223,
+    "expert_level": "Senior Specialist"
+  }
+}
