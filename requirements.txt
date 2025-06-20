@@ -1,74 +1,78 @@
+# 🏥 ReticulotypeToolkit - AI医疗诊断平台依赖包
+# 完整的Python包依赖列表，支持所有9个系统运行
+# 版本锁定以确保环境稳定性和可重现性
+# 已更新至Python 3.12兼容版本
 
 # ===== 核心Web框架 =====
-streamlit==1.28.1
+streamlit==1.29.0
 streamlit-option-menu==0.3.6
 streamlit-aggrid==0.3.4
 
 # ===== 数据处理 =====
-pandas==2.0.3
-numpy==1.23.5
-scipy==1.11.2
+pandas==2.1.4
+numpy==1.26.2
+scipy==1.11.4
 
 # ===== 机器学习和AI =====
-scikit-learn==1.3.0
-torch==2.0.1
-torchvision==0.15.2
-transformers==4.33.0
+scikit-learn==1.3.2
+torch>=2.2.0
+torchvision>=0.17.0
+transformers==4.36.2
 sentence-transformers==2.2.2
 
 # ===== 深度学习相关 =====
-tensorflow==2.10.1
-keras==2.11.0
+tensorflow>=2.15.0
+keras>=3.0.0
 
 # ===== 可视化 =====
-plotly==5.15.0
-matplotlib==3.7.2
-seaborn==0.12.2
-altair==5.0.1
+plotly==5.17.0
+matplotlib==3.8.2
+seaborn==0.13.0
+altair==5.2.0
 
 # ===== 图表和网络 =====
-networkx==3.1
+networkx==3.2.1
 pyvis==0.3.2
 graphviz==0.20.1
 
 # ===== 自然语言处理 =====
 nltk==3.8.1
-spacy==3.6.1
+spacy==3.7.2
 jieba==0.42.1
-openai==0.27.9
+openai==1.6.1
 
 # ===== HTTP请求和API =====
 requests==2.31.0
-httpx==0.24.1
-urllib3==2.0.4
+httpx==0.25.2
+urllib3==2.1.0
 
 # ===== 数据库 =====
-sqlalchemy==2.0.19
+sqlalchemy==2.0.23
 
 # ===== 时间处理 =====
 python-dateutil==2.8.2
 pytz==2023.3
 
 # ===== 加密和安全 =====
-cryptography==41.0.4
-pycryptodome==3.18.0
+cryptography==41.0.8
+pycryptodome==3.19.0
 
 # ===== 图像处理 =====
-Pillow==10.0.0
-opencv-python==4.8.0.76
+Pillow==10.1.0
+opencv-python==4.8.1.78
 
 # ===== 文档和报告 =====
-reportlab==4.0.4
-fpdf2==2.7.5
-python-docx==0.8.11
+reportlab==4.0.7
+fpdf2==2.7.6
+python-docx==1.1.0
 
 # ===== 医疗标准 =====
 fhir.resources==7.0.2
 hl7==0.4.5
-pydicom==2.4.3
+pydicom==2.4.4
 
 # ===== 数据验证 =====
-pydantic==2.1.1
+pydantic==2.5.2
 marshmallow==3.20.1
 cerberus==1.3.5
 
@@ -77,52 +81,51 @@ pyyaml==6.0.1
 python-dotenv==1.0.0
 
 # ===== 日志 =====
-loguru==0.7.0
+loguru==0.7.2
 
 # ===== 测试 =====
-pytest==7.4.0
+pytest==7.4.3
 pytest-cov==4.1.0
-pytest-timeout==2.1.0
+pytest-timeout==2.2.0
 
 # ===== 安全检查 =====
 bandit==1.7.5
 safety==2.3.5
 
 # ===== 代码质量 =====
-black==23.7.0
-flake8==6.0.0
-ruff==0.0.287
-mypy==1.5.1
+black==23.12.0
+flake8==6.1.0
+ruff==0.1.8
+mypy==1.8.0
 
 # ===== 性能优化 =====
-cython==3.0.0
-numba==0.57.1
+cython==3.0.6
+numba==0.58.1
 
 # ===== 统计分析 =====
-statsmodels==0.14.0
-pingouin==0.5.3
+statsmodels==0.14.1
+pingouin==0.5.4
 
 # ===== 医学计算 =====
-lifelines==0.27.7
+lifelines==0.27.8
 medpy==0.4.0
 
 # ===== 其他工具库 =====
 tqdm==4.66.1
-rich==13.5.2
+rich==13.7.0
 typer==0.9.0
 click==8.1.7
-typing-extensions==4.5.0
 
 # ===== 系统监控 =====
-psutil==5.9.5
+psutil==5.9.6
 memory-profiler==0.61.0
 
 # ===== 缓存 =====
-cachetools==5.3.1
-redis==4.6.0
+cachetools==5.3.2
+redis==5.0.1
 
 # ===== JSON处理 =====
-orjson==3.9.5
+orjson==3.9.10
 ujson==5.8.0
 
 # ===== 数学计算 =====
@@ -130,41 +133,41 @@ sympy==1.12
 mpmath==1.3.0
 
 # ===== 机器学习解释性 =====
-shap==0.42.1
+shap==0.44.1
 lime==0.2.0.1
 
 # ===== 联邦学习 =====
-flwr==1.5.0
+flwr==1.6.0
 
 # ===== 中文处理 =====
 zhconv==1.4.3
-pypinyin==0.49.0
+pypinyin==0.50.0
 
 # ===== 数据挖掘 =====
 apyori==1.1.2
-mlxtend==0.22.0
+mlxtend==0.23.0
 
 # ===== 时间序列 =====
-prophet==1.1.4
-arch==6.2.0
+prophet==1.1.5
+arch==6.3.0
 
 # ===== 其他科学计算 =====
-astropy==5.3.2
+astropy==6.0.0
 biopython==1.81
 
 # ===== Web相关 =====
 beautifulsoup4==4.12.2
-lxml==4.9.3
+lxml==4.9.4
 
 # ===== 压缩解压 =====
 zipfile36==0.1.3
 
 # ===== 任务调度 =====
-celery==5.3.1
+celery==5.3.4
 schedule==1.2.0
 
 # ===== WebSocket支持 =====
-websockets==11.0.3
+websockets==12.0
 socketio==0.2.1
 
 # ===== 元学习支持 =====
